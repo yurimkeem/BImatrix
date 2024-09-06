@@ -1,0 +1,75 @@
+h1 {
+  font-size: 2rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  width: 78.125rem;
+  height: 5rem;
+  margin: 0 auto;
+}
+.header h1 {
+  width: 12.875rem;
+}
+@media (max-width: 768px) {
+  .header {
+    width: 100%;
+    padding: 0 1.25rem;
+  }
+}
+
+.main-nav {
+  display: flex;
+  justify-content: center;
+  width: calc(100% - 12.875rem);
+  height: 100%;
+  align-items: center;
+}
+.main-nav .nav-list {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  height: 100%;
+}
+.main-nav .nav-list li a {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  font-size: 1.25rem;
+  color: #000;
+  font-weight: 500;
+}
+.main-nav .nav-list li a:hover + .depth2, .main-nav .nav-list li a:focus + .depth2, .main-nav .nav-list li a:active + .depth2 {
+  display: block;
+}
+.main-nav .nav-list li.search-bar {
+  position: relative;
+  width: 1.625rem;
+  height: 100%;
+}
+.main-nav .nav-list li.search-bar a {
+  position: relative;
+}
+.main-nav .nav-list li.search-bar a::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: calc(50% - 0.625rem);
+  left: 0;
+  width: 1.625rem;
+  height: 1.625rem;
+  background: url(../images/icons/ico_search.png) no-repeat;
+  background-size: contain;
+}
+.main-nav .nav-list li .depth2-wrap {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 25rem;
+  background: rgba(0, 0, 0, 0.6);
+}
+.main-nav .nav-list li .depth2-wrap .depth2 {
+  width: 78.125rem;
+  margin: 0 auto;
+}

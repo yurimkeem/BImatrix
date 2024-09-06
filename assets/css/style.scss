@@ -1,0 +1,65 @@
+@import "./mixin";
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+body {
+    font-size: 16px;
+    font-family: 'Noto Sans KR';
+}
+/* noto-sans-kr-300 - korean */
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/NotoSansKR-Light.ttf') format('ttf')
+  }
+/* noto-sans-kr-regular - korean */
+@font-face {
+font-family: 'Noto Sans KR';
+font-style: normal;
+font-weight: 400;
+
+src: url('../fonts/NotoSansKR-Regular.ttf') format('ttf')
+    
+}
+/* noto-sans-kr-500 - korean */
+@font-face {
+font-family: 'Noto Sans KR';
+font-style: normal;
+font-weight: 500;
+src: url('../fonts/NotoSansKR-Medium.ttf') format('ttf')
+}
+/* noto-sans-kr-700 - korean */
+@font-face {
+font-family: 'Noto Sans KR';
+font-style: normal;
+font-weight: 700;
+src: url('../fonts/NotoSansKR-Bold.ttf') format('ttf')
+}
+.container {
+    position: relative;
+    
+}
+.page-skip {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 100;
+    top: -120rem;
+    right: 0;
+    left: 0;
+    height: 60rem;
+    background-color: color(base, 090);
+
+    // laptop
+    
+
+    &:focus-within {
+        top: 0;
+    }
+}
